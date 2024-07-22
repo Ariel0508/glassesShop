@@ -240,6 +240,11 @@
       background: $secondary-color;
     }
   }
+  .footer-copyright-content {
+    p {
+      cursor: pointer;
+    }
+  }
 
   @media (min-width: 768px) {
     .contact {
