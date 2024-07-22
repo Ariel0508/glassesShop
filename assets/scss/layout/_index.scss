@@ -1,0 +1,260 @@
+.banner {
+  height: calc(100vh - 179px);
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+  background-size: cover;
+  background-position: center;
+}
+.banner .container{
+  position: relative;
+  height: 100%;
+}
+.banner-content{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 14px;
+}
+.banner-btn {
+  padding: 6px 12px;
+  background: $primary-color;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: calc(100vh - 80px);
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-size: cover;
+    background-position: center;
+  }
+  .banner-content{
+    p {
+      font-size: $font-size-5;
+      text-align: end;
+    }
+    h2 {
+      font-size: $font-size-7;
+    }
+  }
+}
+
+
+.info {
+  background: $bg-color;
+}
+
+.info-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.info-item {
+  text-align: center;
+
+  img {
+    width: 84px;
+    height: 84px;
+    margin: 32px 0 24px 0;
+  }
+  p {
+    text-align: start;
+  }
+}
+
+@media (min-width: 768px) {
+  .info {
+    padding-block: 80px;
+  }
+  .info-title {
+    font-size: $font-size-6;
+  }
+  .info-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.products-list{
+  display: flex;
+  flex-direction: column;
+}
+.product-item {
+  img {
+    margin: 24px 0 8px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    padding-block: 80px;
+  }
+  .product-item {
+    img {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .products-list{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;  
+  }
+  .product-item {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.design {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+  background-size: cover;
+  background-position: center;
+}
+.design-title {
+  margin-bottom: 24px;
+}
+.design-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.design-category {
+  background: $light-color;
+  padding-block: 8px;
+}
+
+@media (min-width: 768px) {
+  .design {
+    padding-block: 80px;
+  }
+  .design-title {
+    font-size: $font-size-6;
+  }
+}
+@media (min-width: 992px) {
+  .design {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+  }
+  .design-list {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.recommend-title {
+  margin-bottom: 24px;
+}
+.recommend-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 2px 6px #00000029;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  height: 100%;
+} 
+.recommend-item-img {
+  object-fit: cover;
+  border-radius: 4px 4px 0px 0px;
+  height: 306px;
+}
+.recommend-item-content {
+    padding: 16px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .date {
+        font-size: 14px;
+        margin-top: auto;
+      } 
+  }
+
+  @media (min-width: 768px) {
+    .recommend {
+      padding-block: 80px;
+    }
+    .recommend-title {
+      font-size: $font-size-6;
+    }
+    .recommend-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+    }
+  }
+  @media (min-width: 992px) {
+    .recommend-list {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  .contact {
+    background: $bg-color;
+  }
+  .contact-text {
+    margin-block: 24px;
+  }
+  .form-label,
+  .form-control {
+    display: block;
+    width: 100%;
+  }
+  .form-control {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid $dark-color;
+  }
+  .check-input {
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    margin: 0 4px 0 0;
+  }
+  .check-label {
+    display: block;
+    width: 95%;
+  }
+  .contact-btn {
+    border: none;
+    background: $primary-color;
+    color: $light-color;
+    padding: 16px 0;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .contact {
+      padding-block: 80px;
+    }
+    .contact-btn {
+      width: 50%;
+    }
+    .check-label {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    .contact-text {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+  }
