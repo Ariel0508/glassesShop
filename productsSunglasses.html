@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>glasses shop</title>
+  <script type="module" crossorigin src="/glassesShop/assets/main-6f6f78d0.js"></script>
+  <link rel="stylesheet" href="/glassesShop/assets/main-485c5e04.css">
+</head>
+
+<body>
+    <div class="header">
+    <div class="container">
+        <h1 class="header-logo">
+            <a href="index.html"><img src="
+    https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true" alt="glasses shop">
+            </a>
+        </h1>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-link"><a href="products.html">系列鏡框</a></li>
+                <li class="nav-link"><a href="store.html">門市據點</a></li>
+                <li class="nav-link"><a href="blog.html">部落格</a></li>
+                <li class="nav-link"><a href="faq.html">常見問題</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        <nav>
+<ul class="nav-products d-flex justify-content-between text-center fw-medium">
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="products.html" id="products">OPTICAL</a>
+    </li>
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="productsSunglasses.html" id="productsSunglasses">SUNGLASSES</a>
+    </li>
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="productsFunctional.html" id="productsFunctional">FUNCTIONAL</a>
+    </li>
+</ul>
+</nav>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    
+    const currentUrl = window.location.href;
+    navLinks.forEach(link => {
+        if (currentUrl.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
+</script>            <div class="products-banner d-flex">
+                <picture>
+                    <source media="(max-width: 992px)"
+                        srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true"
+                        alt="products banner picture1">
+                </picture>
+                <picture>
+                    <source media="(max-width: 992px)"
+                        srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true"
+                        alt="products banner picture2">
+                </picture>
+            </div>
+
+            <main>
+                <div class="sunglasses container">
+                    <div class="products-content">
+                        <h2 class="english-title fz-3 fw-medium">2020 NEW COLLECTION</h2>
+                        <h2 class="chinese-title fz-3">賽璐珞鈦金屬混合鏡框</h2>
+                    </div>
+                    <ul class="product-list fw-medium">
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-7.png?raw=true"
+                                alt="product-1">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-8.png?raw=true"
+                                alt="product-2">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-9.png?raw=true"
+                                alt="product-3">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-10.png?raw=true"
+                                alt="product-4">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-11.png?raw=true"
+                                alt="product-5">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-12.png?raw=true"
+                                alt="product-6">
+                            <div class="product-info d-flex justify-content-between">
+                                <p class="number fz-3">BJ41600S</p>
+                                <p class="price fz-3 text-primary">NTD3,490</p>
+                            </div>
+                            <div class="color d-flex">
+                                <div class="color1 mr-2"></div>
+                                <div class="color2"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <nav>
+  <ul class="navigation d-flex text-center justify-content-center mb-16 mb-md-20">
+    <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link active" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+  </ul>
+</nav>
+
+                <footer class="footer text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-link"><a href="index.html">首頁</a></li>
+                        <li class="nav-link"><a href="products.html">系列鏡框</a></li>
+                        <li class="nav-link"><a href="store.html">門市據點</a></li>
+                        <li class="nav-link"><a href="blog.html">部落格</a></li>
+                        <li class="nav-link"><a href="faq.html">常見問題</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-content">
+                    <div class="mb-3 d-flex align-items-center">
+                        <span class="material-icons-outlined call-icon mr-2 mr-md-5">
+                            call
+                        </span>
+                        <a href="tel:0800-000-000">0800-000-000</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="material-icons-outlined mail-icon mr-2 mr-md-5">
+                            mail
+                        </span>
+
+                        <a href="mailto:glasses@business.com">glasses@business.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="social">
+                    <ul class="social-list">
+                        <li class="social-item"><a href="#"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic-social-fb.png?raw=true"
+                                    alt="fb"></a></li>
+                        <li class="social-item"><a href="#"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_ig.png?raw=true"
+                                    alt="ig"></a></li>
+                        <li class="social-item"><a href="#"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/ic_social_line.png?raw=true"
+                                    alt="line"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <p class="mb-2">Copyright © 2020 Glasses.All rights reserved.</p>
+            <div class="footer-copyright-content">
+                <p class="mb-2">隱私權政策</p>
+                <p>服務條款</p>
+            </div>
+        </div>
+    </div>
+</footer>
+                    
+</body>
+
+</html>
