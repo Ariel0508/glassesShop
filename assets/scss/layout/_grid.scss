@@ -1,0 +1,217 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    @include tablet {
+        max-width: 720px;
+
+    }
+    @include desktop { 
+        max-width: 1320px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$gap / 2;
+    margin-right: -$gap / 2;
+}
+
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+
+.py-10 {
+    padding-block: 40px;
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+@for $i from 1 through $columns-num {
+    .col-#{$i} {
+        width: 100% * ($i / $columns-num);
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+    }
+}
+
+
+    @for $i from 1 through $columns-num {
+        .col-sm-#{$i} {
+            width: 100% * ($i / $columns-num);
+            padding-left: $gap / 2;
+            padding-right: $gap / 2;
+        }
+    }
+
+
+@include tablet {
+    @for $i from 1 through $columns-num {
+        .col-md-#{$i} {
+            width: 100% * ($i / $columns-num);
+            padding-left: $gap / 2;
+            padding-right: $gap / 2;
+        }
+    }
+}
+
+@include desktop {
+    @for $i from 1 through $columns-num {
+        .col-lg-#{$i} {
+            width: 100% * ($i / $columns-num);
+            padding-left: $gap / 2;
+            padding-right: $gap / 2;
+        }
+    }
+}
+
+
+@for $i from 0 through $max {
+    .p-#{$i} {
+        padding: $i * 4px;
+    }
+}
+
+@include tablet {
+    @for $i from 0 through $max {
+        .p-md-#{$i} {
+            padding: $i * 4px;
+        }
+    }
+} 
+
+@include desktop {
+    @for $i from 0 through $max {
+        .p-lg-#{$i} {
+            padding: $i * 4px;
+        }
+    }
+}
+
+@for $i from 0 through $max {
+    .py-#{$i} {
+        padding-block: $i * 4px;
+    }
+}
+
+@include tablet {
+    @for $i from 0 through $max {
+        .py-md-#{$i} {
+            padding-block: $i * 4px;
+        }
+    }
+}
+
+@include desktop {
+    @for $i from 0 through $max {
+        .py-lg-#{$i} {
+            padding-block: $i * 4px;
+        }
+    }
+}
+
+
+@for $i from 0 through $max {
+    .mt-#{$i} {
+        margin-top: $i * 4px;
+    }
+}
+
+@include tablet {
+    @for $i from 0 through $max {
+        .mt-md-#{$i} {
+            margin-top: $i * 4px;
+        }
+    }
+}   
+
+@include desktop {
+    @for $i from 0 through $max {
+        .mt-lg-#{$i} {
+            margin-top: $i * 4px;
+        }
+    }
+}
+
+@for $i from 0 through $max {
+  .mb-#{$i} {
+    margin-bottom: $i * 4px;
+  }
+}
+
+@include tablet {
+  @for $i from 0 through $max {
+    .mb-md-#{$i} {
+      margin-bottom: $i * 4px;
+    }
+  }
+}
+
+@include desktop {
+  @for $i from 0 through $max {
+    .mb-lg-#{$i} {
+      margin-bottom: $i * 4px;
+    }
+  }
+}
+
+@for $i from 0 through $max {
+  .ml-#{$i} {
+    margin-left: $i * 4px;
+  }
+}
+
+@include tablet {
+  @for $i from 0 through $max {
+    .ml-md-#{$i} {
+      margin-left: $i * 4px;
+    }
+  }
+}
+
+@include desktop {
+  @for $i from 0 through $max {
+    .ml-lg-#{$i} {
+      margin-left: $i * 4px;
+    }   
+  }
+}
+
+@for $i from 0 through $max {
+  .mr-#{$i} {
+    margin-right: $i * 4px;
+  }
+}
+
+@include tablet {
+  @for $i from 0 through $max {
+    .mr-md-#{$i} {
+      margin-right: $i * 4px;
+    }
+  }
+}   
+
+@include desktop {
+  @for $i from 0 through $max {
+    .mr-lg-#{$i} {
+      margin-right: $i * 4px;
+    }
+  }
+}

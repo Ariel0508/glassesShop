@@ -2,8 +2,57 @@
     background-color: $primary-color;
     padding-block: 24px;
 
+    @include tablet {
+        padding-top: 48px;
+        padding-bottom: 40px;
+    }
+
+    @include desktop {
+      padding-bottom: 32px;
+    }
+
+    @include tablet {
+       
+    }
+
     nav {
         display: none;
+
+        @include tablet {
+            display: block;
+            
+            .nav-list {
+                padding-top: 12px;
+                display: flex;
+                margin-bottom: 40px;
+                margin-left: -24px;
+                margin-right: -24px;
+            }
+            .nav-link{
+                padding: 0 24px;
+                a {
+                    display: block;
+
+                    &:hover {
+                        background: $secondary-color;
+                    }
+                }
+            }
+        }
+
+        @include desktop {
+            .nav-list { 
+                margin-bottom: 44px;
+            }
+    }
+}
+}
+
+@include tablet {
+    .footer-content {
+        p {
+            font-size: $font-size-5;
+        }
     }
 }
 
@@ -17,48 +66,31 @@ hr {
     display: flex;
     gap: 8px;
     justify-content: flex-end;
-}
-.social-item {
-    width: 24px;
-    height: 24px;
-}
 
-
-@media (min-width: 768px) {
-    .footer {
-        nav {
-            display: block;
-            
-            .nav-list {
-                display: flex;
-                gap: 48px;
-                margin-bottom: 40px;
-            }
-            .nav-link{
-                a {
-                    display: inline-block;
-
-                    &:hover {
-                        background: $secondary-color;
-                    }
-                }
-            }
-        }
-    }
-    .footer-content {
-        p {
-            font-size: $font-size-5;
-        }
-    }
-
-    .social-list {
+    @include tablet {
         gap: 24px;
     }
-    .social-item {
+
+    @include desktop {
+        gap: 48px;
+    }
+}
+.social-item a {
+    width: 24px;
+    height: 24px;
+
+    @include tablet {
         width: 40px;
         height: 40px;
     }
 
+    @include desktop {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@include tablet {
     .footer-copyright {
         display: flex;
         justify-content: space-between;
@@ -69,22 +101,18 @@ hr {
         gap: 48px;
     }
 }
-@media (min-width: 992px) {
-    .footer {
-        nav {
 
-            .nav-list {
-                display: flex;
-                gap: 48px;
-                margin-bottom: 44px;
-            }
-        }
+.footer-copyright-content {
+    p {
+      cursor: pointer;
     }
-    .social-list {
-        gap: 32px;
+  }
+
+  @include tablet {
+    .mail-icon {
+        font-size: 40px;
     }
-    .social-item {
-        width: 48px;
-        height: 48px;
+    .call-icon {
+        font-size: 36px;
     }
 }

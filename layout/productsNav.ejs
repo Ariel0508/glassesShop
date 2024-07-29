@@ -1,0 +1,32 @@
+<nav>
+<ul class="nav-products d-flex justify-content-between text-center fw-medium">
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="products.html" id="products">OPTICAL</a>
+    </li>
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="productsSunglasses.html" id="productsSunglasses">SUNGLASSES</a>
+    </li>
+    <li class="nav-item col-sm-4">
+        <a class="nav-link" href="productsFunctional.html" id="productsFunctional">FUNCTIONAL</a>
+    </li>
+</ul>
+</nav>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    
+    const currentUrl = window.location.href;
+    navLinks.forEach(link => {
+        if (currentUrl.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
+</script>

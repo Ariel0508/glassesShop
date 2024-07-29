@@ -1,0 +1,42 @@
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content
+    }
+}
+
+.navigation {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+
+   .page-item {
+        border: 1px solid #555555;
+       }
+    .active.page-link {
+        background: #000;
+        color: #fff;
+    }
+     .page-link {
+       width: 100%;
+       padding: 12px 13px;
+
+       &:hover {
+           background: #000;
+           color: #fff;
+       }
+
+       @include tablet {
+           font-size: 18px;
+       }
+
+    }
+    .page-item:first-child .page-link, .page-item:last-child .page-link {
+     padding: 12px 15px;
+    }
+}

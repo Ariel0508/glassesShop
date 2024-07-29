@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>glasses shop</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+
+    <main>
+      <div class="store store-info">
+        <div class="container">
+          <h2 class="locations fz-3 fw-bold mb-6">門市據點</h2>
+          <div class="row mb-6 mb-md-10">
+            <div class="col-sm-12 col-md-7">
+              <div class="place-select d-flex align-items-center">
+                <label for="place" class="mr-2 mr-md-4">選擇分店</label>
+                <select name="place" id="place">
+                  <option selected>台北中山旗艦店</option>
+                  <option value="">台中清水旗艦店</option>
+                  <option value="">高雄中正形象店</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card-item col-sm-12 col-lg-6 mb-6 mb-lg-0">
+              <div class="row">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/storepage-1.png?raw=true"
+                  alt="store page" class="col-sm-12 col-md-6 col-lg-12">
+                <div class="card-content col-sm-12 col-md-6 col-lg-12">
+                  <h3 class="card-title fz-3">台北中山旗艦店</h3>
+                  <div class="card-text">
+                    <div class="tel fz-2 mb-2 d-flex align-items-center">
+                      <span class="material-icons-outlined">
+                        call
+                      </span>
+                      <a href="tel:020001234" class="ml-3">電話：(02)000-1234</a>
+                    </div>
+                    <div class="time fz-2 mb-2 d-flex">
+                      <span class="material-icons-outlined">
+                        schedule
+                      </span>
+                      <div class="ml-3">營業時間:10:00-21:00</div>
+                    </div>
+                    <div class="address fz-2 d-flex">
+                      <span class="material-icons-outlined">
+                        location_on
+                      </span>
+                      <div class="ml-3">地址：台北市中山區南京東路25巷2-1號</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-map col-sm-12 col-lg-6">
+              <picture>
+                <source media="(max-width: 768px)"
+                  srcset="../assets/images/store-sm.png">
+                <img
+                  src="../assets/images/store-bg.png"
+                  alt="map">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>

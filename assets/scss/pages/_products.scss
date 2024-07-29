@@ -1,0 +1,146 @@
+.nav-products {
+    @include desktop {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    }
+    .nav-item {
+        padding-left: 0;
+        padding-right: 0;
+
+        .nav-link {
+            width: 100%;
+            height: 56px;
+            padding: 16px 12px;
+            display: inline-block;
+            border: 1px solid #DCDCDC;
+
+            @include tablet {
+                height: 68px;
+                padding: 16px 48px;
+                font-size: 24px;
+            }
+
+            @include desktop {
+                height: 96px;
+                padding: 16px 119px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    .nav-link.active {
+    width: 100%;
+    border-bottom: 8px solid $primary-color;
+    }    
+}
+
+.products-content {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0 24px 0;
+
+    @include tablet {
+        padding: 80px 0 32px 0;
+    }
+}
+
+.english-title {
+    @include tablet {
+        font-size: 42px;
+    }
+}
+
+.chinese-title {
+    @include tablet {
+        font-size: $font-size-4;
+    }
+}
+
+.products-banner {
+    picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .product-item {
+        flex: 1 0 100%;
+        margin-bottom: 24px;
+
+        img {
+            min-height: 168px;
+        }
+    }
+    .product-item:nth-child(n+6) {
+        display: none;
+    }
+
+    @include tablet {        
+        
+        .product-item {
+            flex: 1 0 50%;
+            margin-bottom: 40px;
+            padding: 0 12px;
+        }
+        .product-item:nth-child(n+6) {
+            display: block;
+        }
+        .product-item:nth-child(n+11) {
+            display: none;
+        }
+    }
+    
+    @include desktop {
+        margin-bottom: 0;
+
+        .product-item {
+            flex: 1 0 25%;
+            margin-bottom: 80px;
+        }
+        .product-item:nth-child(n+11) {
+            display: block;
+        }
+    }
+    
+    .color1, .color2 {
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+    }
+    .color1 {       
+        background: #5F3E2D;
+    }
+    .color2 {       
+        background: #B75929;
+    }
+}
+
+
+.sunglasses {
+    .products-content {
+        max-width: 467px;
+    }
+    .product-item img {
+        min-height: 224px;
+    }
+    
+    @include desktop {
+     
+        .product-item {
+            flex: 1 0 33.333%;
+        }
+    }
+}
+
+

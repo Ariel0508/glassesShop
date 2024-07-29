@@ -3,6 +3,13 @@
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
   background-size: cover;
   background-position: center;
+
+  @include tablet {
+    height: calc(100vh - 80px);
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-size: cover;
+    background-position: center;  
+  }
 }
 .banner .container{
   position: relative;
@@ -13,7 +20,17 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  padding-right: 14px;
+  padding-right: 24px;
+
+  @include tablet {
+    p {
+      font-size: $font-size-5;
+      text-align: end;
+    }
+    h2 {
+      font-size: $font-size-7;
+    }
+  }
 }
 .banner-btn {
   padding: 6px 12px;
@@ -24,33 +41,22 @@
   }
 }
 
-@media (min-width: 768px) {
-  .banner {
-    height: calc(100vh - 80px);
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
-    background-size: cover;
-    background-position: center;
-  }
-  .banner-content{
-    p {
-      font-size: $font-size-5;
-      text-align: end;
-    }
-    h2 {
-      font-size: $font-size-7;
-    }
-  }
-}
-
-
 .info {
   background: $bg-color;
 }
 
+@include tablet {
+  .info-title {
+    font-size: $font-size-6;
+  }
+}
+
 .info-list {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 .info-item {
@@ -66,94 +72,63 @@
   }
 }
 
-@media (min-width: 768px) {
-  .info {
-    padding-block: 80px;
-  }
-  .info-title {
-    font-size: $font-size-6;
-  }
-  .info-list {
-    flex-direction: row;
-    gap: 24px;
-  }
-}
-
 .products-list{
-  display: flex;
   flex-direction: column;
-}
-.product-item {
-  img {
-    margin: 24px 0 8px 0;
+
+  @include desktop {
+    flex-direction: row;
   }
 }
 
-@media (min-width: 768px) {
-  .products {
-    padding-block: 80px;
-  }
-  .products-title {
-    font-size: $font-size-6;
-  }
-  .product-item {
+.products .product-item {
+
+  @include tablet {
     img {
       width: 50%;
     }
   }
-}
-@media (min-width: 992px) {
-  .products-list{
-    display: flex;
-    flex-direction: row;
-    gap: 24px;  
-  }
-  .product-item {
+
+  @include desktop {
     img {
       width: 100%;
     }
   }
 }
 
+@include tablet {
+  .products-title {
+    font-size: $font-size-6;
+  }
+}
+
+
 .design {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
   background-size: cover;
   background-position: center;
-}
-.design-title {
-  margin-bottom: 24px;
+
+  @include desktop {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+  }
 }
 .design-list {
-  display: flex;
   flex-direction: column;
-  gap: 24px;
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 .design-category {
   background: $light-color;
   padding-block: 8px;
 }
 
-@media (min-width: 768px) {
-  .design {
-    padding-block: 80px;
-  }
+@include tablet {
   .design-title {
     font-size: $font-size-6;
   }
 }
-@media (min-width: 992px) {
-  .design {
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
-  }
-  .design-list {
-    flex-direction: row;
-    gap: 0;
-  }
-}
 
-.recommend-title {
-  margin-bottom: 24px;
-}
 .recommend-item {
   display: flex;
   flex-direction: column;
@@ -166,11 +141,13 @@
 .recommend-item-img {
   object-fit: cover;
   border-radius: 4px 4px 0px 0px;
-  height: 306px;
+  height: 100%;
+  min-height: 306px;
 }
 .recommend-item-content {
     padding: 16px;
-    height: 205px;
+    height: 100%;
+    min-height: 205px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -181,27 +158,30 @@
       } 
   }
 
-  @media (min-width: 768px) {
-    .recommend {
-      padding-block: 80px;
-    }
+  @include tablet {
     .recommend-title {
       font-size: $font-size-6;
     }
     .recommend-list {
-      display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
-      gap: 24px;
+
+      li {
+        margin-bottom: 24px;
+      }
+      li:nth-last-child(-n+2) {
+        margin-bottom: 0px;
+    }
     }
   }
-  @media (min-width: 992px) {
+  @include desktop {
     .recommend-list {
-      display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
-      gap: 24px;
+
+      li {
+        margin-bottom: 0px;
+      }
     }
   }
 
@@ -243,13 +223,8 @@
       background: $secondary-color;
     }
   }
-  .footer-copyright-content {
-    p {
-      cursor: pointer;
-    }
-  }
 
-  @media (min-width: 768px) {
+  @include tablet {
     .contact {
       padding-block: 80px;
     }
@@ -260,7 +235,7 @@
       width: 100%;
     }
   }
-  @media (min-width: 992px) {
+  @include desktop {
     .contact-text {
       margin-top: 48px;
       margin-bottom: 24px;

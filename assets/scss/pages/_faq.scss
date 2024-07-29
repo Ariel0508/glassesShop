@@ -1,0 +1,21 @@
+.faq {
+    padding-top: 40px;
+    padding-bottom: 64px;
+    .faq-title {
+        border-left: 8px solid #9F1213;
+        padding-left: 16px;
+
+        @include tablet {
+            font-size: 48px;
+    }
+   }
+
+   @include tablet {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}  
+   @include desktop {
+    padding-top: 96px;
+    padding-bottom: 80px;
+}  
+}
