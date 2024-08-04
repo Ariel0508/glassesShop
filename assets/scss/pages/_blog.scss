@@ -49,9 +49,12 @@
     .blog-list {
         justify-content: center;
         .blog-item {
+            filter: grayscale(0%);
+            transition: filter 0.3s ease;
 
             &:hover {
                 cursor: pointer;
+                filter: grayscale(70%);
             }
             
             figure{
